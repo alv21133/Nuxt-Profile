@@ -1,45 +1,36 @@
 <template>
-  <div>
+  <div
+    :class="{
+      def: true,
+      customColor: select === 'default',
+      customColor2: select === 'custom',
+    }"
+  >
     <navbar />
     <div class="container">
       <Logo />
       <h1 class="title">
         yudibest-profile
       </h1>
-      <br />
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    </div>
+    <div class="text-center d-flex">
+      <button @click="select = 'default'" class="btn btn-info ml-3">
+        Original
+      </button>
+      <button @click="select = 'custom'" class="btn btn-info ml-2">
+        Custom
+      </button>
     </div>
   </div>
 </template>
-
 <script>
-import navbar from '../components/navbar'
 export default {
   id: 'index',
-  data: () => ({}),
-  components: {
-    navbar,
-  },
+  data: () => ({
+    select: 'default',
+  }),
 }
 </script>
-
 <style>
 .container {
   margin: 0 auto;
@@ -56,7 +47,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: #5a4a4a;
   letter-spacing: 1px;
 }
 
@@ -70,5 +61,38 @@ export default {
 
 .links {
   display: flex;
+}
+
+@keyframes color1 {
+  from {
+    top: 50%;
+  }
+  to {
+    top: 0%;
+    background: rgb(248, 226, 65);
+    background: linear-gradient(
+      149deg,
+      rgba(248, 226, 65, 1) 0%,
+      rgba(4, 252, 255, 1) 100%
+    );
+  }
+}
+.def {
+  max-height: 1px;
+}
+.customColor {
+  animation: color1 0s;
+  animation-fill-mode: forwards;
+  transition: ease-in 0.3s;
+  max-height: 1200px;
+}
+
+.customColor2 {
+  background: rgb(255, 212, 179);
+  background: linear-gradient(
+    140deg,
+    rgba(255, 212, 179, 1) 0%,
+    rgba(255, 0, 9, 1) 100%
+  );
 }
 </style>
