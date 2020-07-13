@@ -1,25 +1,14 @@
 <template>
-  <div
-    :class="{
-      def: true,
-      customColor: select === 'default',
-      customColor2: select === 'custom',
-    }"
-  >
+  <div>
     <navbar />
-    <div class="container">
+    <div class="centainer mt-5">
       <Logo />
-      <h1 class="title">
+      <h5 class="title text-dark">
         yudibest-profile
-      </h1>
+      </h5>
     </div>
-    <div class="text-center d-flex">
-      <button @click="select = 'default'" class="btn btn-info ml-3">
-        Original
-      </button>
-      <button @click="select = 'custom'" class="btn btn-info ml-2">
-        Custom
-      </button>
+    <div class="wave">
+      <img src="~/assets/wave2.svg" alt="wait.." class="mt-3" />
     </div>
   </div>
 </template>
@@ -35,7 +24,6 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -46,8 +34,8 @@ export default {
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
-  color: #5a4a4a;
+  font-size: 50px;
+  color: #292828;
   letter-spacing: 1px;
 }
 
@@ -88,11 +76,17 @@ export default {
 }
 
 .customColor2 {
+  margin-top: -2px;
+  min-height: 500px;
   background: rgb(255, 212, 179);
   background: linear-gradient(
-    140deg,
-    rgba(255, 212, 179, 1) 0%,
-    rgba(255, 0, 9, 1) 100%
+    0deg,
+    rgba(255, 212, 179, 0) 0%,
+    rgba(80, 0, 202, 1) 100%
   );
+}
+
+.wave {
+  margin-top: auto;
 }
 </style>
