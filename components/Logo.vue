@@ -17,6 +17,7 @@
 .NuxtLogo {
   animation: 1s appear;
   margin: auto;
+  z-index: 15;
 }
 
 @keyframes appear {
