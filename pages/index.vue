@@ -23,7 +23,7 @@
     <div class="centainer mt-5">
       <Logo />
       <h5 class="title text-dark">
-        yudibest-profile
+        -
       </h5>
     </div>
     <div class="wave">
@@ -117,7 +117,7 @@ export default {
 }
 
 .wave {
-  margin-top: 150px;
+  margin-top: 295px;
   z-index: 5;
 }
 .particle {
