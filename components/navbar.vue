@@ -12,7 +12,7 @@
       </b-navbar-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item>Experience</b-nav-item>
+        <b-nav-item class="text-light">Experience</b-nav-item>
         <b-nav-item>About</b-nav-item>
         <b-nav-item-dropdown text="koko" right>
           <b-dropdown-item href="#">EN</b-dropdown-item>

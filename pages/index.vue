@@ -1,41 +1,54 @@
 <template>
   <div>
-    <vue-particles
-      color="#001eff"
-      :particleOpacity="1.7"
-      :particlesNumber="20"
-      shapeType="edge"
-      :particleSize="4"
-      linesColor="#001eff"
-      :linesWidth="1"
-      :lineLinked="true"
-      :lineOpacity="1.4"
-      :linesDistance="180"
-      :moveSpeed="3"
-      :hoverEffect="true"
-      hoverMode="grab"
-      :clickEffect="true"
-      clickMode="push"
-      class="particle"
-    />
-
     <navbar style="z-index: 100;" />
-    <div class="centainer mt-5">
-      <Logo />
-      <h5 class="title text-dark">
-        -
-      </h5>
+    <b-container fluid>
+      <vue-particles
+        color="#001eff"
+        :particleOpacity="1.7"
+        :particlesNumber="20"
+        shapeType="edge"
+        :particleSize="4"
+        linesColor="#001eff"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="1.4"
+        :linesDistance="180"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+        class="particle"
+      />
+      <div class="mt-5">
+        <Logo />
+        <h5 class="title text-dark">
+          -
+        </h5>
+        <div class="text-rignt">
+          <img
+            height="900"
+            src="~/assets/triangle.png"
+            alt="wait.."
+            class="triangle"
+          />
+        </div>
+      </div>
+    </b-container>
+
+    <!-- <div class="wave">
+      <img src="~/assets/wave1.svg" alt="wait.." class="mt-3" />
+    </div> -->
+
+    <div class="d-none">
+      <p>swdfsdf</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A qui
+        aspernatur exercitationem eius dolor dolorem corporis recusandae
+        repudiandae illo officiis expedita, blanditiis autem possimus delectus
+        quo eos iste quasi ipsum!
+      </p>
     </div>
-    <div class="wave">
-      <img src="~/assets/wave2.svg" alt="wait.." class="mt-3" />
-    </div>
-    <p>swdfsdf</p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. A qui aspernatur
-      exercitationem eius dolor dolorem corporis recusandae repudiandae illo
-      officiis expedita, blanditiis autem possimus delectus quo eos iste quasi
-      ipsum!
-    </p>
   </div>
 </template>
 <script>
@@ -117,12 +130,17 @@ export default {
 }
 
 .wave {
-  margin-top: 295px;
   z-index: 5;
 }
 .particle {
   position: absolute;
   width: 100%;
   z-index: -1;
+}
+
+.triangle {
+  position: relative;
+  top: -380px;
+  right: -320px;
 }
 </style>
