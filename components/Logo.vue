@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-left">
+    <div class="d-flex">
       <b-img
         width="200"
         height="200"
@@ -10,40 +10,42 @@
         class="NuxtLogo"
         @click="click1"
       ></b-img>
-      <transition name="fadeDown">
-        <b-card
-          v-show="count == 1"
-          title="Card title "
-          sub-title="Card subtitle"
-          class="rotate"
-          border-variant="white"
-        >
-          <b-card-text>
-            {{ count }}
-          </b-card-text>
-          <b-card-text>A second paragraph of text in the card.</b-card-text>
+      <div class="position-card">
+        <transition name="fadeDown">
+          <b-card
+            v-show="count == 1"
+            title="Card title "
+            sub-title="Card subtitle"
+            class="rotate"
+            border-variant="white"
+          >
+            <b-card-text>
+              {{ count }}
+            </b-card-text>
+            <b-card-text>A second paragraph of text in the card.</b-card-text>
 
-          <a href="#" class="card-link">Card link</a>
-          <b-link href="#" class="card-link">Another link</b-link>
-        </b-card>
-      </transition>
-      <transition name="fadeDown">
-        <b-card
-          v-show="count == 2"
-          title="Card title "
-          sub-title="Card subtitle"
-          class="rotate"
-          border-variant="white"
-        >
-          <b-card-text>
-            {{ count }}
-          </b-card-text>
-          <b-card-text>A second paragraph of text in the card.</b-card-text>
+            <a href="#" class="card-link">Card link</a>
+            <b-link href="#" class="card-link">Another link</b-link>
+          </b-card>
+        </transition>
+        <transition name="fadeDown">
+          <b-card
+            v-show="count == 2"
+            title="Card title "
+            sub-title="Card subtitle"
+            class="rotate"
+            border-variant="white"
+          >
+            <b-card-text>
+              {{ count }}
+            </b-card-text>
+            <b-card-text>A second paragraph of text in the card.</b-card-text>
 
-          <a href="#" class="card-link">Card link</a>
-          <b-link href="#" class="card-link">Another link</b-link>
-        </b-card>
-      </transition>
+            <a href="#" class="card-link">Card link</a>
+            <b-link href="#" class="card-link">Another link</b-link>
+          </b-card>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -72,10 +74,7 @@ export default {
 <style>
 .NuxtLogo {
   animation: 1s appear;
-  margin: auto;
   z-index: 15;
-  margin-top: 200px;
-  margin-bottom: -200px;
 }
 
 @keyframes appear {
@@ -86,7 +85,11 @@ export default {
 
 .rotate {
   position: absolute;
-  left: 210px;
-  top: 290px;
+  width: 38ch;
+}
+
+.position-card {
+  position: relative;
+  left: 100px;
 }
 </style>

@@ -5,7 +5,6 @@
     <b-navbar-toggle target="nav-collapse" class="text-dark"
       >Moblie</b-navbar-toggle
     >
-
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item href="#"></b-nav-item>

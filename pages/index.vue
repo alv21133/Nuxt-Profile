@@ -1,8 +1,8 @@
 <template>
   <div>
     <navbar style="z-index: 100;" />
-    <b-container fluid>
-      <vue-particles
+    <div class="parent">
+      <!-- <vue-particles
         color="#001eff"
         :particleOpacity="1.7"
         :particlesNumber="20"
@@ -19,36 +19,21 @@
         :clickEffect="true"
         clickMode="push"
         class="particle"
-      />
-      <div class="mt-5">
+      /> -->
+      <div class="box">
         <Logo />
-        <h5 class="title text-dark">
-          -
-        </h5>
-        <div class="text-rignt">
-          <img
-            height="900"
-            src="~/assets/triangle.png"
-            alt="wait.."
-            class="triangle"
-          />
-        </div>
+        <b-img
+          class="triangle"
+          src="~/assets/triangle6.png"
+          fluid
+          alt="Responsive image"
+        ></b-img>
       </div>
-    </b-container>
+    </div>
 
     <!-- <div class="wave">
       <img src="~/assets/wave1.svg" alt="wait.." class="mt-3" />
     </div> -->
-
-    <div class="d-none">
-      <p>swdfsdf</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A qui
-        aspernatur exercitationem eius dolor dolorem corporis recusandae
-        repudiandae illo officiis expedita, blanditiis autem possimus delectus
-        quo eos iste quasi ipsum!
-      </p>
-    </div>
   </div>
 </template>
 <script>
@@ -64,14 +49,6 @@ export default {
 }
 </script>
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -139,8 +116,19 @@ export default {
 }
 
 .triangle {
+  z-index: -100;
   position: relative;
-  top: -380px;
-  right: -320px;
+  top: -260px;
+}
+
+.parent {
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  width: clamp(100%, 50%, 46ch);
+  display: flex;
+  flex-direction: column;
 }
 </style>
